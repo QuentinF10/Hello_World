@@ -2,3 +2,5 @@ com/example/helloworld/BuildConfig.java
  com.example.helloworld.BuildConfig
 com/example/helloworld/MainActivity.java
  com.example.helloworld.MainActivity
+com/example/helloworld/EcranAccueil.java
+ com.example.helloworld.EcranAccueil
