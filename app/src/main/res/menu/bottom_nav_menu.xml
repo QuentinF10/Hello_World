@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/accueil"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Accueil" />
+    <item
+        android:id="@+id/budget"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+        android:title="Budget"/>
+    <item
+        android:id="@+id/epargne"
+        android:title="Epargne"
+        android:icon="@drawable/ic_baseline_savings_24"/>
+    <item
+        android:id="@+id/stats"
+        android:title="Stats"
+        android:icon="@drawable/ic_baseline_query_stats_24"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Mon Compte"
+        android:icon="@drawable/ic_baseline_person_24"/>
+
+</menu>
