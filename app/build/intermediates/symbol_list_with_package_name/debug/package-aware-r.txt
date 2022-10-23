@@ -1431,7 +1431,6 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
-id accueil
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1461,6 +1460,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id bottomNavigationView
 id budget
 id buttonPanel
 id cancel_button
@@ -1485,6 +1485,7 @@ id coordinator
 id custom
 id customPanel
 id cut
+id dataBinding
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
@@ -1515,6 +1516,7 @@ id filter_chip
 id fitToContents
 id fixed
 id forever
+id frame_layout
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1527,6 +1529,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -1579,6 +1582,8 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id onAttachStateChangeListener
+id onDateChanged
 id outline
 id packed
 id parallax
@@ -1659,6 +1664,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textWatcher
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1747,6 +1753,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_profile
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1763,8 +1770,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout ecranaccueil
-layout home
+layout fragment_budget
+layout fragment_epargne
+layout fragment_home
+layout fragment_profile
+layout fragment_stats
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -1858,6 +1868,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string mtrl_badge_numberless_content_description

@@ -1,4 +1,4 @@
-#Sat Oct 22 12:48:55 CEST 2022
+#Sun Oct 23 23:07:46 CEST 2022
 base.0=C\:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

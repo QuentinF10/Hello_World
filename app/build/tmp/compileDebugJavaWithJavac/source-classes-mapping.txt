@@ -1,6 +1,34 @@
+com/example/helloworld/BudgetFragment.java
+ com.example.helloworld.BudgetFragment
+com/example/helloworld/ProfileFragment.java
+ com.example.helloworld.ProfileFragment
 com/example/helloworld/BuildConfig.java
  com.example.helloworld.BuildConfig
+com/example/helloworld/EpargneFragment.java
+ com.example.helloworld.EpargneFragment
+com/example/helloworld/databinding/FragmentEpargneBinding.java
+ com.example.helloworld.databinding.FragmentEpargneBinding
+com/example/helloworld/databinding/FragmentBudgetBinding.java
+ com.example.helloworld.databinding.FragmentBudgetBinding
+com/example/helloworld/HomeFragment.java
+ com.example.helloworld.HomeFragment
+ com.example.helloworld.HomeFragment$DataBinderMapperImpl
+ com.example.helloworld.HomeFragment$DataBindingComponent
+com/example/helloworld/databinding/FragmentStatsBinding.java
+ com.example.helloworld.databinding.FragmentStatsBinding
+com/example/helloworld/DataBindingTriggerClass.java
+ com.example.helloworld.DataBindingTriggerClass
+com/example/helloworld/ActivityProfile.java
+ com.example.helloworld.ActivityProfile
 com/example/helloworld/MainActivity.java
  com.example.helloworld.MainActivity
-com/example/helloworld/EcranAccueil.java
- com.example.helloworld.EcranAccueil
+com/example/helloworld/databinding/FragmentProfileBinding.java
+ com.example.helloworld.databinding.FragmentProfileBinding
+com/example/helloworld/databinding/ActivityMainBinding.java
+ com.example.helloworld.databinding.ActivityMainBinding
+com/example/helloworld/StatsFragment.java
+ com.example.helloworld.StatsFragment
+com/example/helloworld/databinding/FragmentHomeBinding.java
+ com.example.helloworld.databinding.FragmentHomeBinding
+com/example/helloworld/databinding/ActivityProfileBinding.java
+ com.example.helloworld.databinding.ActivityProfileBinding
