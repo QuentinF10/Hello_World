@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_epargne.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\fragment_epargne.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_budget.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\fragment_budget.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_stats.xml",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\fragment_stats.xml"
+    }
+]
