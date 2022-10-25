@@ -6,11 +6,16 @@ com/example/helloworld/BuildConfig.java
  com.example.helloworld.BuildConfig
 com/example/helloworld/EpargneFragment.java
  com.example.helloworld.EpargneFragment
+com/example/helloworld/connexion.java
+ com.example.helloworld.connexion
+ com.example.helloworld.connexion$1
 com/example/helloworld/activity_splash.java
  com.example.helloworld.activity_splash
  com.example.helloworld.activity_splash$1
 com/example/helloworld/databinding/FragmentEpargneBinding.java
  com.example.helloworld.databinding.FragmentEpargneBinding
+com/example/helloworld/Fonctions.java
+ com.example.helloworld.Fonctions
 com/example/helloworld/databinding/FragmentBudgetBinding.java
  com.example.helloworld.databinding.FragmentBudgetBinding
 com/example/helloworld/databinding/FragmentStatsBinding.java
@@ -29,6 +34,8 @@ com/example/helloworld/databinding/ActivityMainBinding.java
  com.example.helloworld.databinding.ActivityMainBinding
 com/example/helloworld/StatsFragment.java
  com.example.helloworld.StatsFragment
+com/example/helloworld/databinding/ActivityConnexionBinding.java
+ com.example.helloworld.databinding.ActivityConnexionBinding
 com/example/helloworld/databinding/FragmentHomeBinding.java
  com.example.helloworld.databinding.FragmentHomeBinding
 com/example/helloworld/databinding/ActivityProfileBinding.java

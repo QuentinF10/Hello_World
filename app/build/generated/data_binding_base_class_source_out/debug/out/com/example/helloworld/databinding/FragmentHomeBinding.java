@@ -19,11 +19,20 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final TextView dPenses;
+
+  @NonNull
   public final TextView dateTextView;
 
-  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView dateTextView) {
+  @NonNull
+  public final TextView revenus;
+
+  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView dPenses,
+      @NonNull TextView dateTextView, @NonNull TextView revenus) {
     this.rootView = rootView;
+    this.dPenses = dPenses;
     this.dateTextView = dateTextView;
+    this.revenus = revenus;
   }
 
   @Override
@@ -53,13 +62,25 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.dépenses;
+      TextView dPenses = rootView.findViewById(id);
+      if (dPenses == null) {
+        break missingId;
+      }
+
       id = R.id.dateTextView;
       TextView dateTextView = rootView.findViewById(id);
       if (dateTextView == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, dateTextView);
+      id = R.id.revenus;
+      TextView revenus = rootView.findViewById(id);
+      if (revenus == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((FrameLayout) rootView, dPenses, dateTextView, revenus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

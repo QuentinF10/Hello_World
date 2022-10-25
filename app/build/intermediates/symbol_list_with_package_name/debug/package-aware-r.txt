@@ -1355,6 +1355,7 @@ drawable ic_baseline_account_balance_wallet_24
 drawable ic_baseline_home_24
 drawable ic_baseline_person_24
 drawable ic_baseline_query_stats_24
+drawable ic_baseline_rectangle_24
 drawable ic_baseline_savings_24
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
@@ -1392,9 +1393,11 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rectangle_shape
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font anton
 font archivo
 id ALT
 id BOTTOM_END
@@ -1469,6 +1472,7 @@ id beginning
 id blocking
 id bottom
 id bottomNavigationView
+id btn_send
 id budget
 id buttonPanel
 id cancel_button
@@ -1509,6 +1513,7 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id dépenses
 id edit_query
 id end
 id enterAlways
@@ -1602,6 +1607,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pass
 id password_toggle
 id peekHeight
 id percent
@@ -1609,7 +1615,9 @@ id pin
 id profile
 id progress_circular
 id progress_horizontal
+id pseudo
 id radio
+id revenus
 id right
 id right_icon
 id right_side
@@ -1764,6 +1772,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_connexion
 layout activity_main
 layout activity_profile
 layout activity_splash

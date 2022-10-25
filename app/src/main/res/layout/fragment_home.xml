@@ -14,7 +14,37 @@
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
-        android:fontFamily="@font/archivo"
+        android:fontFamily="@font/anton"
         android:textColor="@color/black"
         android:textSize="35sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/revenus"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/archivo"
+            android:text="Revenus"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/dépenses"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/archivo"
+            android:text="Dépenses"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+    </FrameLayout>
+
 </FrameLayout>
