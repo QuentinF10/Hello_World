@@ -9,6 +9,7 @@ import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -53,10 +54,14 @@ public class connexion extends AppCompatActivity {
 
             if(rs.getString(1).equals(pass.getText().toString())){
                 NextActivity();
-
+                TextView loading = (TextView) findViewById(R.id.loading);
+                loading.setText("Connexion réussie");
             }
+
             }catch( Exception e){
             e.printStackTrace();
+            TextView loading = (TextView) findViewById(R.id.loading);
+            loading.setText("Identifiant ou MDP incorrect");
         }
     }
 

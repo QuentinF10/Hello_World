@@ -21,13 +21,33 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:hint="Password"
+        android:inputType="textPassword"
         android:layout_marginTop="100dp"/>
     
     <Button
         android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
         android:text="Connexion"/>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="300dp"
+        android:src="@drawable/mysaving" />
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_marginTop="200dp"
+        android:layout_below="@id/center_bloc"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        />
 </RelativeLayout>
