@@ -5,19 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import com.example.helloworld.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   private final FrameLayout rootView;
 
-  private FragmentHomeBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final TextView dateTextView;
+
+  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView dateTextView) {
     this.rootView = rootView;
+    this.dateTextView = dateTextView;
   }
 
   @Override
@@ -43,10 +49,19 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public static FragmentHomeBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.dateTextView;
+      TextView dateTextView = rootView.findViewById(id);
+      if (dateTextView == null) {
+        break missingId;
+      }
 
-    return new FragmentHomeBinding((FrameLayout) rootView);
+      return new FragmentHomeBinding((FrameLayout) rootView, dateTextView);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

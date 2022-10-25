@@ -6,15 +6,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
-import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
+
+
 
 import com.example.helloworld.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class MainActivity<string> extends AppCompatActivity {
 
     ActivityMainBinding binding;
     @Override
@@ -22,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
+        replaceFragment(new HomeFragmentActivity());
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
 
             switch(item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new HomeFragment());
+                    replaceFragment(new HomeFragmentActivity());
                     break;
                 case R.id.budget:
                     replaceFragment(new BudgetFragment());
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
+
     }
 
     private void replaceFragment(Fragment fragment) {
@@ -53,5 +57,12 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
+    }
+    public void setDate (TextView view){
+
+        Date today = Calendar.getInstance().getTime();//getting date
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");//formating according to my need
+        String date = formatter.format(today);
+        view.setText(date);
     }
 }

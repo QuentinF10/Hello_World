@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_700"
-    tools:context=".HomeFragment">
+    android:background="@color/gris_clair"
+    tools:context=".HomeFragmentActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="home fragment" />
-
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/archivo"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
 </FrameLayout>
