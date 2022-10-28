@@ -20,7 +20,7 @@ import javax.sql.ConnectionEvent;
 public class connexion extends AppCompatActivity {
 
     private static Button btn_send;
-    private static EditText pseudo,pass;
+    public static EditText pseudo,pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +55,6 @@ public class connexion extends AppCompatActivity {
             if(rs.getString(1).equals(pass.getText().toString())){
                 NextActivity();
                 TextView loading = (TextView) findViewById(R.id.loading);
-                loading.setText("Connexion réussie");
             }
 
             }catch( Exception e){

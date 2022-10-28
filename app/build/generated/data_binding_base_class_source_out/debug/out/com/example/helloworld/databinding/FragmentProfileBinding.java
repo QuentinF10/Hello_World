@@ -4,8 +4,10 @@ package com.example.helloworld.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -16,19 +18,28 @@ import java.lang.String;
 
 public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final ImageView imageView;
 
-  private FragmentProfileBinding(@NonNull FrameLayout rootView, @NonNull ImageView imageView) {
+  @NonNull
+  public final ListView listview;
+
+  @NonNull
+  public final TextView pseudonyme;
+
+  private FragmentProfileBinding(@NonNull RelativeLayout rootView, @NonNull ImageView imageView,
+      @NonNull ListView listview, @NonNull TextView pseudonyme) {
     this.rootView = rootView;
     this.imageView = imageView;
+    this.listview = listview;
+    this.pseudonyme = pseudonyme;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -59,7 +70,19 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((FrameLayout) rootView, imageView);
+      id = R.id.listview;
+      ListView listview = rootView.findViewById(id);
+      if (listview == null) {
+        break missingId;
+      }
+
+      id = R.id.pseudonyme;
+      TextView pseudonyme = rootView.findViewById(id);
+      if (pseudonyme == null) {
+        break missingId;
+      }
+
+      return new FragmentProfileBinding((RelativeLayout) rootView, imageView, listview, pseudonyme);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

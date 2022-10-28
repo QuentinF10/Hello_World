@@ -194,6 +194,10 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -1405,6 +1409,7 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
+id Password
 id SHIFT
 id SYM
 id TOP_END
@@ -1531,6 +1536,7 @@ id filter_chip
 id fitToContents
 id fixed
 id forever
+id fragment_container
 id frame_layout
 id ghost_view
 id ghost_view_holder
@@ -1557,6 +1563,7 @@ id line1
 id line3
 id listMode
 id list_item
+id listview
 id loading
 id masked
 id message
@@ -1616,6 +1623,7 @@ id profile
 id progress_circular
 id progress_horizontal
 id pseudo
+id pseudonyme
 id radio
 id revenus
 id right
@@ -1774,7 +1782,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_connexion
 layout activity_main
-layout activity_profile
 layout activity_splash
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1797,6 +1804,7 @@ layout fragment_epargne
 layout fragment_home
 layout fragment_profile
 layout fragment_stats
+layout listviewitem
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2631,6 +2639,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
