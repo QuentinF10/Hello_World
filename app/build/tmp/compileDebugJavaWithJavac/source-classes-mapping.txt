@@ -4,6 +4,8 @@ com/example/helloworld/BuildConfig.java
  com.example.helloworld.BuildConfig
 com/example/helloworld/EpargneFragment.java
  com.example.helloworld.EpargneFragment
+com/example/helloworld/databinding/ActivityTransactionBinding.java
+ com.example.helloworld.databinding.ActivityTransactionBinding
 com/example/helloworld/connexion.java
  com.example.helloworld.connexion
  com.example.helloworld.connexion$1
@@ -24,25 +26,32 @@ de/hdodenhof/circleimageview/CircleImageView.java
  de.hdodenhof.circleimageview.CircleImageView$OutlineProvider
 com/example/helloworld/databinding/FragmentStatsBinding.java
  com.example.helloworld.databinding.FragmentStatsBinding
+com/example/helloworld/transaction_activity.java
+ com.example.helloworld.transaction_activity
+com/example/helloworld/databinding/FragmentHomeBinding.java
+ com.example.helloworld.databinding.FragmentHomeBinding
 com/example/helloworld/DataBindingTriggerClass.java
  com.example.helloworld.DataBindingTriggerClass
 com/example/helloworld/databinding/ListviewitemBinding.java
  com.example.helloworld.databinding.ListviewitemBinding
 com/example/helloworld/databinding/ActivitySplashBinding.java
  com.example.helloworld.databinding.ActivitySplashBinding
-com/example/helloworld/MainActivity.java
- com.example.helloworld.MainActivity
+com/example/helloworld/databinding/ActivityConnexionBinding.java
+ com.example.helloworld.databinding.ActivityConnexionBinding
 com/example/helloworld/databinding/FragmentProfileBinding.java
  com.example.helloworld.databinding.FragmentProfileBinding
 com/example/helloworld/databinding/ActivityMainBinding.java
  com.example.helloworld.databinding.ActivityMainBinding
 com/example/helloworld/StatsFragment.java
  com.example.helloworld.StatsFragment
-com/example/helloworld/databinding/ActivityConnexionBinding.java
- com.example.helloworld.databinding.ActivityConnexionBinding
-com/example/helloworld/databinding/FragmentHomeBinding.java
- com.example.helloworld.databinding.FragmentHomeBinding
-com/example/helloworld/HomeFragmentActivity.java
- com.example.helloworld.HomeFragmentActivity
- com.example.helloworld.HomeFragmentActivity$DataBinderMapperImpl
- com.example.helloworld.HomeFragmentActivity$DataBindingComponent
+com/example/helloworld/fragment_home.java
+ com.example.helloworld.fragment_home
+ com.example.helloworld.fragment_home$1
+ com.example.helloworld.fragment_home$2
+ com.example.helloworld.fragment_home$DataBinderMapperImpl
+ com.example.helloworld.fragment_home$DataBindingComponent
+ com.example.helloworld.fragment_home$GetData
+ com.example.helloworld.fragment_home$GetData$1
+ com.example.helloworld.fragment_home$GetData$2
+com/example/helloworld/MainActivity.java
+ com.example.helloworld.MainActivity

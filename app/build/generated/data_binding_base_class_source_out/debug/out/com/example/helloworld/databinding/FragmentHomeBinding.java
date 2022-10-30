@@ -4,10 +4,12 @@ package com.example.helloworld.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.helloworld.R;
 import java.lang.NullPointerException;
@@ -16,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final TextView dPenses;
@@ -25,19 +27,28 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView dateTextView;
 
   @NonNull
+  public final SwipeRefreshLayout refreshLayout;
+
+  @NonNull
   public final TextView revenus;
 
-  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView dPenses,
-      @NonNull TextView dateTextView, @NonNull TextView revenus) {
+  @NonNull
+  public final ListView userList;
+
+  private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull TextView dPenses,
+      @NonNull TextView dateTextView, @NonNull SwipeRefreshLayout refreshLayout,
+      @NonNull TextView revenus, @NonNull ListView userList) {
     this.rootView = rootView;
     this.dPenses = dPenses;
     this.dateTextView = dateTextView;
+    this.refreshLayout = refreshLayout;
     this.revenus = revenus;
+    this.userList = userList;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -74,13 +85,26 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.refreshLayout;
+      SwipeRefreshLayout refreshLayout = rootView.findViewById(id);
+      if (refreshLayout == null) {
+        break missingId;
+      }
+
       id = R.id.revenus;
       TextView revenus = rootView.findViewById(id);
       if (revenus == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, dPenses, dateTextView, revenus);
+      id = R.id.userList;
+      ListView userList = rootView.findViewById(id);
+      if (userList == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((RelativeLayout) rootView, dPenses, dateTextView,
+          refreshLayout, revenus, userList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

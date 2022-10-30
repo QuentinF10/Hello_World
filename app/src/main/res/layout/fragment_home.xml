@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gris_clair"
-    tools:context=".HomeFragmentActivity">
+    android:layout_marginHorizontal="16dp">
 
     <TextView
         android:id="@+id/dateTextView"
@@ -45,6 +45,23 @@
             android:text="Dépenses"
             android:textColor="@color/black"
             android:textSize="35sp" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="436dp"
+            android:layout_marginTop="220dp">
+
+            <ListView
+                android:id="@+id/userList"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginTop="320dp" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
     </FrameLayout>
 
-</FrameLayout>
+
+
+</RelativeLayout>

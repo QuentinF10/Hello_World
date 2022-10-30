@@ -20,6 +20,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.HelloWorld" >
+        <activity
+            android:name="com.example.helloworld.transaction_activity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity android:name="com.example.helloworld.connexion" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

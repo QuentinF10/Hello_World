@@ -6,28 +6,32 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.TextView;
-
+import android.widget.ArrayAdapter;
 
 
 import com.example.helloworld.databinding.ActivityMainBinding;
 
 
-import java.text.SimpleDateFormat;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-  //  ActivityMainBinding binding2;
 
 
     @Override
@@ -36,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragmentActivity());
+
+        replaceFragment(new fragment_home());
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
 
             switch(item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new HomeFragmentActivity());
+                    replaceFragment(new fragment_home());
                     break;
                 case R.id.budget:
                     replaceFragment(new BudgetFragment());
@@ -70,5 +75,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
     }
+
 
 }
