@@ -21,7 +21,7 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView dPenses;
+  public final TextView Transactions;
 
   @NonNull
   public final TextView dateTextView;
@@ -30,19 +30,15 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final SwipeRefreshLayout refreshLayout;
 
   @NonNull
-  public final TextView revenus;
-
-  @NonNull
   public final ListView userList;
 
-  private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull TextView dPenses,
+  private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull TextView Transactions,
       @NonNull TextView dateTextView, @NonNull SwipeRefreshLayout refreshLayout,
-      @NonNull TextView revenus, @NonNull ListView userList) {
+      @NonNull ListView userList) {
     this.rootView = rootView;
-    this.dPenses = dPenses;
+    this.Transactions = Transactions;
     this.dateTextView = dateTextView;
     this.refreshLayout = refreshLayout;
-    this.revenus = revenus;
     this.userList = userList;
   }
 
@@ -73,9 +69,9 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.dépenses;
-      TextView dPenses = rootView.findViewById(id);
-      if (dPenses == null) {
+      id = R.id.Transactions;
+      TextView Transactions = rootView.findViewById(id);
+      if (Transactions == null) {
         break missingId;
       }
 
@@ -91,20 +87,14 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.revenus;
-      TextView revenus = rootView.findViewById(id);
-      if (revenus == null) {
-        break missingId;
-      }
-
       id = R.id.userList;
       ListView userList = rootView.findViewById(id);
       if (userList == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((RelativeLayout) rootView, dPenses, dateTextView,
-          refreshLayout, revenus, userList);
+      return new FragmentHomeBinding((RelativeLayout) rootView, Transactions, dateTextView,
+          refreshLayout, userList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

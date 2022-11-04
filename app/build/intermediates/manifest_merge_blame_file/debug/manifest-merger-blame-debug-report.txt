@@ -17,64 +17,60 @@
 13    <application
 13-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:7:5-36:19
 14        android:allowBackup="true"
-14-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:8:9-35
+14-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:10:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 15-->[androidx.core:core:1.1.0] C:\Users\Quentin\.gradle\caches\transforms-2\files-2.1\ae31cc97a3f9383e0242537d69427d3a\core-1.1.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
-17-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:9:9-43
+17-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:11:9-43
 18        android:label="MySaving"
-18-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:10:9-33
+18-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:12:9-33
 19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:11:9-54
+19-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:13:9-54
 20        android:supportsRtl="true"
-20-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:12:9-35
+20-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:14:9-35
 21        android:testOnly="true"
-22        android:theme="@style/Theme.HelloWorld" >
-22-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:13:9-48
-23        <activity
-23-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:14:9-20:20
-24            android:name="com.example.helloworld.transaction_activity"
-24-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:15:13-49
-25            android:exported="false" >
-25-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:16:13-37
-26            <meta-data
-26-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:17:13-19:36
-27                android:name="android.app.lib_name"
-27-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:18:17-52
-28                android:value="" />
-28-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:19:17-33
-29        </activity>
-30        <activity android:name="com.example.helloworld.connexion" >
-30-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:21:9-27:20
-30-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:21:19-44
-31            <intent-filter>
-31-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:22:13-26:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:23:17-69
-32-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:23:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:25:17-77
-34-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:25:27-74
-35            </intent-filter>
-36        </activity>
-37        <activity android:name="com.example.helloworld.MainActivity" />
-37-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:28:9-50
-37-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:28:19-47
-38        <activity
-38-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:29:9-35:20
-39            android:name="com.example.helloworld.ActivityProfile"
-39-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:30:13-44
-40            android:exported="false" >
-40-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:31:13-37
-41            <meta-data
-41-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:17:13-19:36
-42                android:name="android.app.lib_name"
-42-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:18:17-52
-43                android:value="" />
-43-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:19:17-33
-44        </activity>
-45    </application>
-46
-47</manifest>
+22        android:theme="@style/Theme.HelloWorld"
+22-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:15:9-48
+23        android:usesCleartextTraffic="true" >
+23-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:9:9-44
+24        <activity
+24-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:16:9-22:20
+25            android:name="com.example.helloworld.transaction_activity"
+25-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:17:13-49
+26            android:exported="false" >
+26-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:18:13-37
+27            <meta-data
+27-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:19:13-21:36
+28                android:name="android.app.lib_name"
+28-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:20:17-52
+29                android:value="" />
+29-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:21:17-33
+30        </activity>
+31        <activity android:name="com.example.helloworld.connexion" >
+31-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:23:9-29:20
+31-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:23:19-44
+32            <intent-filter>
+32-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:24:13-28:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:25:17-69
+33-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:25:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:27:17-77
+35-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:27:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="com.example.helloworld.MainActivity" />
+38-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:30:9-50
+38-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:30:19-47
+39        <activity
+39-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:32:9-35:20
+40            android:name="com.example.helloworld.RegisterActivity"
+40-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:33:13-45
+41            android:label="@string/title_activity_register" >
+41-->C:\Users\Quentin\OneDrive - ESIEE Paris\Bureau\ESIEE\Android\Android\Exercices\hello_world\app\src\main\AndroidManifest.xml:34:13-60
+42        </activity>
+43    </application>
+44
+45</manifest>

@@ -72,6 +72,10 @@
         "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_savings_24.png"
     },
     {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\xml\\network_security_config.xml"
+    },
+    {
         "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\res\\merged\\debug\\layout_listviewitem.xml.flat",
         "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\listviewitem.xml"
     },
@@ -118,6 +122,10 @@
     {
         "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
         "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
         "merged": "C:\\Users\\Quentin\\OneDrive - ESIEE Paris\\Bureau\\ESIEE\\Android\\Android\\Exercices\\hello_world\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_transaction.xml.flat",

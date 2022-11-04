@@ -18,8 +18,28 @@ import java.sql.Statement;
 import javax.sql.ConnectionEvent;
 
 public class connexion extends AppCompatActivity {
+    private Button btn_login, btn_register;
 
-    private static Button btn_send;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_connexion);
+
+        btn_login = (Button) findViewById(R.id.btn_login);
+        btn_register = (Button) findViewById(R.id.btn_register);
+
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+
+   /* private static Button btn_send;
     public static EditText pseudo,pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,5 +89,5 @@ public class connexion extends AppCompatActivity {
         startActivity(intent);
         finish();
 
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 package com.example.helloworld;
 
-import static com.example.helloworld.connexion.pseudo;
+//import static com.example.helloworld.connexion.pseudo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -37,7 +37,7 @@ public class fragment_profile extends Fragment implements AdapterView.OnItemClic
         listView.setOnItemClickListener(this);
 
         TextView affichage_pseudo = (TextView) view.findViewById(R.id.pseudonyme);
-        affichage_pseudo.setText(pseudo.getText().toString());
+       // affichage_pseudo.setText(pseudo.getText().toString());
     }
 
     @Override

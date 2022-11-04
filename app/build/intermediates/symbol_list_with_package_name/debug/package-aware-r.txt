@@ -1007,6 +1007,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1415,6 +1417,7 @@ id SHIFT
 id SYM
 id TOP_END
 id TOP_START
+id Transactions
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1479,6 +1482,8 @@ id beginning
 id blocking
 id bottom
 id bottomNavigationView
+id btn_login
+id btn_register
 id btn_send
 id budget
 id buttonPanel
@@ -1520,12 +1525,15 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
-id dépenses
 id edit_query
 id end
 id enterAlways
 id enterAlwaysCollapsed
 id epargne
+id et_email
+id et_password
+id et_password2
+id et_pseudo
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1616,8 +1624,8 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
-id pass
 id password_toggle
+id pb_loader
 id peekHeight
 id percent
 id pin
@@ -1628,7 +1636,6 @@ id pseudo
 id pseudonyme
 id radio
 id refreshLayout
-id revenus
 id right
 id right_icon
 id right_side
@@ -1786,6 +1793,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_connexion
 layout activity_main
+layout activity_register
 layout activity_splash
 layout activity_transaction
 layout custom_dialog
@@ -1891,21 +1899,26 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string button_send
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string edit_message
+string email
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string hello_blank_fragment
+string hello_world
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string login
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -1940,13 +1953,19 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string password
+string password2
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pseudo
+string register
+string register_title
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_register
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2711,6 +2730,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml network_security_config
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

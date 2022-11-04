@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.HelloWorld" >
+        android:theme="@style/Theme.HelloWorld"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.helloworld.transaction_activity"
             android:exported="false" >
@@ -36,11 +37,8 @@
         </activity>
         <activity android:name="com.example.helloworld.MainActivity" />
         <activity
-            android:name="com.example.helloworld.ActivityProfile"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:name="com.example.helloworld.RegisterActivity"
+            android:label="@string/title_activity_register" >
         </activity>
     </application>
 
