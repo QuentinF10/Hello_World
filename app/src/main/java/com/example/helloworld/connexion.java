@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -25,15 +26,21 @@ public class connexion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
+        Intent intent = getIntent();
+        if(intent.hasExtra("REGISTER")){
+            Toast.makeText(this,intent.getStringExtra("REGISTER"),Toast.LENGTH_SHORT).show();
+        }
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
 
-        btn_register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-                startActivity(intent);
-            }
+        btn_register.setOnClickListener(v -> {
+            Intent intent1 = new Intent(getApplicationContext(), RegisterActivity.class);
+            startActivity(intent1);
+        });
+
+        btn_login.setOnClickListener(v -> {
+            Intent intent12 = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent12);
         });
 
 

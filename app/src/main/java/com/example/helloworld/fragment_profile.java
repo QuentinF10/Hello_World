@@ -37,6 +37,7 @@ public class fragment_profile extends Fragment implements AdapterView.OnItemClic
         listView.setOnItemClickListener(this);
 
         TextView affichage_pseudo = (TextView) view.findViewById(R.id.pseudonyme);
+
        // affichage_pseudo.setText(pseudo.getText().toString());
     }
 
