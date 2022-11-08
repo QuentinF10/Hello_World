@@ -10,6 +10,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.databinding.MergedDataBinderMapper;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Handler;
@@ -50,7 +51,7 @@ import java.util.Random;
  * Use the {@link fragment_home#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_home extends Fragment implements AdapterView.OnItemClickListener {
+public class fragment_home extends Fragment  {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,14 +61,14 @@ public class fragment_home extends Fragment implements AdapterView.OnItemClickLi
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-   // fragment_home binding;
-     ArrayList<String> userList;
+    // fragment_home binding;
+    ArrayList<String> userList;
     ArrayList<String> amountList;
     ArrayAdapter<String> listAdapter;
     Handler mainHandler = new Handler();
-     ProgressDialog progressDialog;
+    ProgressDialog progressDialog;
+    private SessionManager sessionManager;
     SwipeRefreshLayout swipeRefreshLayout;
-
 
 
     public fragment_home() {
@@ -116,23 +117,25 @@ public class fragment_home extends Fragment implements AdapterView.OnItemClickLi
     //afficher date dans le textview fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        TextView dateView = (TextView) getView().findViewById(R.id.dateTextView);
+        TextView dateView = (TextView) getView().findViewById(R.id.textView2);
         setDate(dateView);
+
         //Button reload = (Button) getView().findViewById(R.id.reload);
-        ListView listView=(ListView) view.findViewById(R.id.userList);
+        ListView listView=(ListView) getView().findViewById(R.id.transactions);
         SwipeRefreshLayout swipeRefreshLayout = view.findViewById(R.id.refreshLayout);
 
         userList = new ArrayList<>();
-        amountList = new ArrayList<>();
-        listAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,userList);
+        //amountList = new ArrayList<>();
+        listAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1 ,userList);
         listView.setAdapter(listAdapter);
+        new GetData().start();
 
         //on gère les appuis sur les items de la listview
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+     /*   listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i == 0){
-                    startActivity(new Intent(getActivity(),transaction_activity.class));
+
 
                 }
                 else if(i == 1){
@@ -142,7 +145,7 @@ public class fragment_home extends Fragment implements AdapterView.OnItemClickLi
 
                 }
             }
-        });
+        });*/
 
         // Refresh  the layout
         swipeRefreshLayout.setOnRefreshListener(
@@ -161,67 +164,78 @@ public class fragment_home extends Fragment implements AdapterView.OnItemClickLi
                         swipeRefreshLayout.setRefreshing(false);
                     }
                 });
-    }
-
-    //récuperer les données du JSON
-    class GetData extends Thread {
-
-        String data="";
-
-        @Override
-        public void run() {
-
-            mainHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    progressDialog = new ProgressDialog(getActivity());
-                    progressDialog.setMessage("Getting Data");
-                    progressDialog.setCancelable(false);
-                    progressDialog.show();
-                }
-            });
-            try {
-                URL url = new URL("https://api.npoint.io/880c49e07b8ee16d5c23");
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                InputStream inputStream = httpURLConnection.getInputStream();
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String line;
-
-                while((line = bufferedReader.readLine()) != null){
-                    data = data + line;
-                }
-                //récup des valeurs remplissage des tableaux pour les items de la listview
-                if(!data.isEmpty()){
-                    JSONObject jsonObject = new JSONObject(data);
-                    JSONArray Transactions = jsonObject.getJSONArray("Transactions");
-                    for(int i=0;i<Transactions.length();i++){
-                        JSONObject names = Transactions.getJSONObject(i);
-                        String name =  names.getString("name");
-                        JSONObject amounts = Transactions.getJSONObject(i);
-                        //String amount = amounts.getString("amount");
-                       //Intent intent = new Intent(getActivity(),transaction_activity.class);
-                       // intent.putExtra("amount",amount);
-                        //startActivity(intent);
-                        userList.add(name);
-                        //amountList.add(amount);
-                    }
-                }
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-           mainHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    if(progressDialog.isShowing()) progressDialog.dismiss();
-                    listAdapter.notifyDataSetChanged();
-                }
-            });
+        sessionManager = new SessionManager(getActivity());
+        if(sessionManager.isLogged()){
+            String pseudo = sessionManager.getPseudo();
+            String id = sessionManager.getId();
+            TextView affichage_pseudo = (TextView) view.findViewById(R.id.textView5);
+            affichage_pseudo.setText(pseudo);
         }
     }
+
+        //récuperer les données du JSON
+        class GetData extends Thread {
+
+            String data = "";
+
+            @Override
+            public void run() {
+
+                mainHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog = new ProgressDialog(getActivity());
+                        progressDialog.setMessage("Getting Data");
+                        progressDialog.setCancelable(false);
+                        progressDialog.show();
+                    }
+                });
+                try {
+                    URL url = new URL("https://api.npoint.io/880c49e07b8ee16d5c23");
+                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                    String line;
+
+                    while ((line = bufferedReader.readLine()) != null) {
+                        data = data + line;
+                    }
+                    //récup des valeurs remplissage des tableaux pour les items de la listview
+                    if (!data.isEmpty()) {
+                        JSONObject jsonObject = new JSONObject(data);
+                        JSONArray Transactions = jsonObject.getJSONArray("Transactions");
+                        for (int i = 0; i < Transactions.length(); i++) {
+                            JSONObject objet = Transactions.getJSONObject(i);
+                            String name = objet.getString("name");
+                            //JSONObject amounts = Transactions.getJSONObject(i);
+                            String amount = objet.getString("amount");
+
+                            //JSONObject types = Transactions.getJSONObject(i);
+                            String type = objet.getString("type");
+                            String additions = name + "" + amount + "                                 " + type;
+                            //Intent intent = new Intent(getActivity(),transaction_activity.class);
+                            // intent.putExtra("amount",amount);
+                            //startActivity(intent);
+                            userList.add(additions);
+                           // amountList.add(amount);
+                        }
+                    }
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                mainHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (progressDialog.isShowing()) progressDialog.dismiss();
+                        listAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        }
 
 
 
@@ -269,7 +283,7 @@ public class fragment_home extends Fragment implements AdapterView.OnItemClickLi
         }
         view.setText(date);
     }
-
+/*
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -282,5 +296,5 @@ public class fragment_home extends Fragment implements AdapterView.OnItemClickLi
     }
 
     public static interface DataBindingComponent {
+    }*/
     }
-}

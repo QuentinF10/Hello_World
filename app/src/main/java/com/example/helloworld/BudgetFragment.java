@@ -1,12 +1,29 @@
 package com.example.helloworld;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import com.github.mikephil.charting.animation.Easing;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +31,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class BudgetFragment extends Fragment {
+
+     PieChart pieChart;
+     Spinner spinner;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,12 +73,107 @@ public class BudgetFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_budget, container, false);
+        View view = inflater.inflate(R.layout.fragment_budget, container, false);
+
+
+
+        return view;
+
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        pieChart = (PieChart)  Objects.requireNonNull(getView()).findViewById(R.id.activity_main_piechart);
+
+        spinner = (Spinner) Objects.requireNonNull(getView()).findViewById(R.id.spinner);
+        String[] arrMonths = new String[]{"Septembre","Octobre","Novembre"};
+        ArrayAdapter<CharSequence> adapter1 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item,arrMonths);
+        spinner.setAdapter(adapter1 );
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = arrMonths[position];
+                setupPieChart();
+                loadPieChartData(selectedItem);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    private void setupPieChart() {
+        pieChart.setDrawHoleEnabled(true);
+        pieChart.setUsePercentValues(true);
+        pieChart.setEntryLabelTextSize(12);
+        pieChart.setEntryLabelColor(Color.BLACK);
+        pieChart.getDescription().setEnabled(false);
+
+        // Legend l = pieChart.getLegend();
+        //l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        //l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        //l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        // l.setDrawInside(false);
+        // l.setEnabled(true);
+
+    }
+    private void loadPieChartData(String selectedItem){
+        ArrayList<PieEntry> entries = new ArrayList<>();
+
+        if (Objects.equals(selectedItem, "Septembre")) {
+            entries.add(new PieEntry(0.2f, "Food"));
+            entries.add(new PieEntry(0.1f, "Essence"));
+            entries.add(new PieEntry(0.5f, "Porno"));
+            entries.add(new PieEntry(0.2f, "Electricity"));
+        }
+        else if(Objects.equals(selectedItem, "Octobre")){
+            entries.add(new PieEntry(0.1f, "Food"));
+            entries.add(new PieEntry(0.2f, "Essence"));
+            entries.add(new PieEntry(0.3f, "Porno"));
+            entries.add(new PieEntry(0.4f, "Electricity"));
+        }
+        else if(Objects.equals(selectedItem, "Novembre")){
+            entries.add(new PieEntry(0.3f, "Food"));
+            entries.add(new PieEntry(0.3f, "Essence"));
+            entries.add(new PieEntry(0.3f, "Porno"));
+            entries.add(new PieEntry(0.1f, "Electricity"));
+        }
+        ArrayList<Integer> colors = new ArrayList<>();
+
+        for (int color: ColorTemplate.MATERIAL_COLORS) {
+            colors.add(color);
+        }
+
+        for (int color: ColorTemplate.VORDIPLOM_COLORS) {
+            colors.add(color);
+        }
+        PieDataSet dataSet = new PieDataSet(entries, "Expense Category");
+        dataSet.setColors(colors);
+
+        PieData data = new PieData(dataSet);
+        data.setDrawValues(true);
+        data.setValueFormatter(new PercentFormatter(pieChart));
+        data.setValueTextSize(12f);
+        data.setValueTextColor(Color.BLACK);
+
+        pieChart.setData(data);
+        pieChart.invalidate();
+
+        pieChart.animateY(1400, Easing.EaseInOutQuad);
     }
 }
