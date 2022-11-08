@@ -32,7 +32,7 @@ public class MyRequest extends AppCompatActivity {
 
     public void register(final String pseudo, final String email, final String password, final String password2, RegisterCallback callback){
 
-        String url = "http://192.168.1.14/espace_membre/register.php";
+        String url = "http://192.168.168.12/espace_membre/register.php";
 
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -105,7 +105,7 @@ public class MyRequest extends AppCompatActivity {
     }
     public void connection(String pseudo, String password, LoginCallback callback){
 
-        String url = "http://192.168.1.14/espace_membre/login.php";
+        String url = "http://192.168.168.12/espace_membre/login.php";
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

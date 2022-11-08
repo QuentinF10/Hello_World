@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -32,16 +33,25 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    private SessionManager sessionManager;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        sessionManager = new SessionManager(this);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        replaceFragment(new fragment_home());
+
+
+        if(sessionManager.isLogged()){
+            replaceFragment(new fragment_home());
+            //Intent intent = new Intent(this,fragment_profile.class);
+            //finish();
+        }
+
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
 
